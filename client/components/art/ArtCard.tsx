@@ -158,14 +158,14 @@ export function ArtCard({ artPiece, className }: ArtCardProps) {
             <Button
               onClick={handleAddToCart}
               className="w-full"
-              variant={isInCart(artPiece.id) ? "secondary" : "default"}
+              variant={itemInCart ? "secondary" : "default"}
               disabled={isAdding}
             >
               <ShoppingCart className="mr-2 h-4 w-4" />
               {isAdding
                 ? "Adding..."
-                : getItemQuantity(artPiece.id) > 0
-                  ? `In Cart (${getItemQuantity(artPiece.id)})`
+                : currentQuantity > 0
+                  ? `In Cart (${currentQuantity})`
                   : "Add to Cart"}
             </Button>
           </div>
