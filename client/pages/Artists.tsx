@@ -236,13 +236,15 @@ export default function Artists() {
           <div className="flex gap-4">
             <Select
               value={selectedSpecialty}
-              onValueChange={setSelectedSpecialty}
+              onValueChange={(value) =>
+                setSelectedSpecialty(value === "all" ? "" : value)
+              }
             >
               <SelectTrigger className="w-[180px]">
                 <SelectValue placeholder="All Specialties" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">All Specialties</SelectItem>
+                <SelectItem value="all">All Specialties</SelectItem>
                 {availableStyles.map((style) => (
                   <SelectItem key={style} value={style}>
                     {style}
