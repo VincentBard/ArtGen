@@ -78,9 +78,8 @@ export function Footer() {
               <span className="font-display text-xl font-bold">ArtGen</span>
             </Link>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Discover and collect stunning AI-generated artworks from talented
-              digital artists around the world. Where technology meets
-              creativity.
+              Discover and collect stunning digital artworks from talented
+              artists around the world. Where technology meets creativity.
             </p>
 
             {/* Contact Info */}
