@@ -1,6 +1,13 @@
 import { useState, useEffect, useMemo } from "react";
-import { useSearchParams } from "react-router-dom";
-import { Grid, List, SlidersHorizontal, Search } from "lucide-react";
+import { useSearchParams, Link } from "react-router-dom";
+import {
+  Grid,
+  List,
+  SlidersHorizontal,
+  Search,
+  ShoppingCart,
+  ArrowRight,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
