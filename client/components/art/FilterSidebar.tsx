@@ -139,6 +139,7 @@ export function FilterSidebar({
               max={priceRange.max}
               min={priceRange.min}
               step={50}
+              minStepsBetweenThumbs={1}
               className="w-full"
             />
             <div className="flex justify-between text-sm text-muted-foreground mt-2">
