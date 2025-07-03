@@ -156,7 +156,7 @@ const artists = [
     awards: ["Botanical Beauty Award"],
     social: {
       website: "https://emmarodriguez.garden",
-      instagram: "@emma_botanical_ai",
+      instagram: "@emma_botanical_art",
     },
     stats: {
       followers: 1600,
