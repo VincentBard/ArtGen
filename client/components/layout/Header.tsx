@@ -61,13 +61,16 @@ export function Header() {
             <Link
               key={item.name}
               to={item.href}
-              className={`text-sm font-medium transition-colors hover:text-primary ${
+              className={`text-sm font-medium transition-all duration-200 hover:text-primary hover:scale-105 relative ${
                 isActivePath(item.href)
-                  ? "text-primary"
+                  ? "text-primary font-semibold"
                   : "text-muted-foreground"
               }`}
             >
               {item.name}
+              {isActivePath(item.href) && (
+                <div className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+              )}
             </Link>
           ))}
         </nav>
