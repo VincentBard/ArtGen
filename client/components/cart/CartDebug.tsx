@@ -1,7 +1,8 @@
 import { useCart } from "@/hooks/useCart";
+import { mockArtPieces } from "@/data/mockArt";
 
 export function CartDebug() {
-  const { cart, getItemCount } = useCart();
+  const { cart, getItemCount, addToCart } = useCart();
 
   if (process.env.NODE_ENV !== "development") {
     return null;
