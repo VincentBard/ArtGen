@@ -135,8 +135,8 @@ export default function Index() {
               Why Choose ArtGen?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We're revolutionizing the art world by combining artificial
-              intelligence with human creativity.
+              We're revolutionizing the art world by empowering digital artists
+              with innovative tools and global reach.
             </p>
           </div>
 
