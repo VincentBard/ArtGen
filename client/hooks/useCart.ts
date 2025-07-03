@@ -32,6 +32,7 @@ export function useCart() {
 
   // Save cart to localStorage whenever it changes
   useEffect(() => {
+    console.log("useCart: Cart state changed", cart);
     if (typeof window !== "undefined") {
       localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     }
