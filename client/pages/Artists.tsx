@@ -90,7 +90,7 @@ const artists = [
     awards: ["Organic Beauty Award 2024"],
     social: {
       website: "https://mayapatel.art",
-      instagram: "@maya_nature_ai",
+      instagram: "@maya_nature_art",
     },
     stats: {
       followers: 1800,
