@@ -1,4 +1,10 @@
-import { useState, useEffect } from "react";
+import {
+  useState,
+  useEffect,
+  createContext,
+  useContext,
+  ReactNode,
+} from "react";
 import { Cart, CartItem, ArtPiece } from "@shared/types";
 
 const CART_STORAGE_KEY = "artgallery_cart";
