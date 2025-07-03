@@ -229,9 +229,9 @@ export default function Collections() {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore handpicked collections of AI-generated artworks,
-            thoughtfully curated by our artists and community. Each collection
-            tells a unique story through carefully selected pieces.
+            Explore handpicked collections of digital artworks, thoughtfully
+            curated by our artists and community. Each collection tells a unique
+            story through carefully selected pieces.
           </p>
         </div>
 
