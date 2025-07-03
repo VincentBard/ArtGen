@@ -7,17 +7,24 @@ export function CartTest() {
 
   const handleAddTest = () => {
     const testItem = mockArtPieces[0];
+    console.log("TEST: Before add - Cart:", cart);
     console.log("TEST: Adding item", testItem.title);
     addToCart(testItem);
-    console.log("TEST: Cart after add", cart);
+    // Add a small delay to check async state updates
+    setTimeout(() => {
+      console.log("TEST: Cart state after delay", cart);
+    }, 100);
   };
 
   const handleRemoveTest = () => {
     if (cart.items.length > 0) {
       const firstItem = cart.items[0];
+      console.log("TEST: Before remove - Cart:", cart);
       console.log("TEST: Removing item", firstItem.artPiece.title);
       removeFromCart(firstItem.artPiece.id);
-      console.log("TEST: Cart after remove", cart);
+      setTimeout(() => {
+        console.log("TEST: Cart state after remove delay", cart);
+      }, 100);
     }
   };
 
