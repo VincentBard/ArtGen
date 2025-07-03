@@ -28,7 +28,7 @@ export function CartDebug() {
 
   return (
     <div className="fixed bottom-20 left-6 bg-black text-white p-3 rounded text-xs z-50 max-w-xs">
-      <div className="font-bold">Cart Debug:</div>
+      <div className="font-bold">Cart Debug: (R:{forceRender})</div>
       <div>Items Count: {getItemCount()}</div>
       <div>Array Length: {cart.items.length}</div>
       <div>Total: ${cart.total.toFixed(2)}</div>
