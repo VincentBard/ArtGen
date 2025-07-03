@@ -65,13 +65,13 @@ export default function Index() {
                 <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight">
                   Where{" "}
                   <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                    AI Meets
+                    Art Meets
                   </span>{" "}
-                  Artistry
+                  Innovation
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-md">
-                  Discover, collect, and own stunning AI-generated artworks from
-                  talented digital artists around the world.
+                  Discover, collect, and own stunning digital artworks from
+                  talented artists around the world.
                 </p>
               </div>
 
