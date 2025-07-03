@@ -29,13 +29,10 @@ export function useCart() {
     }
   }, []);
 
-  // Save cart to localStorage whenever it changes (but not on initial load)
+  // Save cart to localStorage whenever it changes
   useEffect(() => {
-    // Don't save the initial empty cart immediately to avoid overriding saved cart
-    if (cart.items.length > 0 || cart.total > 0) {
-      console.log("useCart: Saving cart to localStorage", cart);
-      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
-    }
+    console.log("useCart: Saving cart to localStorage", cart);
+    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
   }, [cart]);
 
   const calculateTotals = (items: CartItem[]): Partial<Cart> => {
