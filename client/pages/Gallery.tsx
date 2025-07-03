@@ -198,7 +198,7 @@ export default function Gallery() {
             Art Gallery
           </h1>
           <p className="text-muted-foreground">
-            Discover amazing AI-generated artworks from talented digital artists
+            Discover amazing digital artworks from talented artists worldwide
           </p>
         </div>
 
