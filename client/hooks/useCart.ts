@@ -45,7 +45,12 @@ export function useCart() {
   };
 
   const addToCart = (artPiece: ArtPiece, quantity = 1) => {
+    console.log("useCart: Adding to cart", {
+      artPiece: artPiece.title,
+      quantity,
+    });
     setCart((prevCart) => {
+      console.log("useCart: Previous cart state", prevCart);
       const existingItemIndex = prevCart.items.findIndex(
         (item) => item.artPiece.id === artPiece.id,
       );
@@ -59,13 +64,17 @@ export function useCart() {
             ? { ...item, quantity: item.quantity + quantity }
             : item,
         );
+        console.log("useCart: Updated existing item", newItems);
       } else {
         // Add new item
         newItems = [...prevCart.items, { artPiece, quantity }];
+        console.log("useCart: Added new item", newItems);
       }
 
       const totals = calculateTotals(newItems);
-      return { ...prevCart, items: newItems, ...totals };
+      const newCart = { ...prevCart, items: newItems, ...totals };
+      console.log("useCart: New cart state", newCart);
+      return newCart;
     });
   };
 
