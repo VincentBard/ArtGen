@@ -40,7 +40,10 @@ const artists = [
     specialties: ["Surrealism", "Abstract", "Digital Art"],
     artworkCount: 12,
     featured: true,
-    awards: ["AI Art Innovation Award 2024", "Digital Dreams Contest Winner"],
+    awards: [
+      "Digital Art Innovation Award 2024",
+      "Digital Dreams Contest Winner",
+    ],
     social: {
       website: "https://lunamartinez.art",
       instagram: "@luna_digital_dreams",
