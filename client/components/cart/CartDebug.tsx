@@ -7,19 +7,27 @@ export function CartDebug() {
     return null;
   }
 
+  const storageData =
+    typeof window !== "undefined"
+      ? localStorage.getItem("artgallery_cart")
+      : null;
+
   return (
     <div className="fixed bottom-20 left-6 bg-black text-white p-3 rounded text-xs z-50 max-w-xs">
-      <div>Cart Debug:</div>
-      <div>Items: {getItemCount()}</div>
+      <div className="font-bold">Cart Debug:</div>
+      <div>Items Count: {getItemCount()}</div>
+      <div>Array Length: {cart.items.length}</div>
       <div>Total: ${cart.total.toFixed(2)}</div>
-      <div>
-        LocalStorage: {localStorage.getItem("artgallery_cart") ? "Yes" : "No"}
-      </div>
+      <div>Subtotal: ${cart.subtotal.toFixed(2)}</div>
+      <div>LocalStorage: {storageData ? "Yes" : "No"}</div>
+      {storageData && (
+        <div>Storage Items: {JSON.parse(storageData).items?.length || 0}</div>
+      )}
       <pre className="text-xs mt-2 max-h-20 overflow-auto">
         {JSON.stringify(
           cart.items.map((item) => ({
             id: item.artPiece.id,
-            title: item.artPiece.title,
+            title: item.artPiece.title.substring(0, 15),
             qty: item.quantity,
           })),
           null,
