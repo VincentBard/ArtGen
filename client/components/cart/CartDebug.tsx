@@ -13,6 +13,12 @@ export function CartDebug() {
       ? localStorage.getItem("artgallery_cart")
       : null;
 
+  const testAddToCart = () => {
+    const testArt = mockArtPieces[0];
+    console.log("Debug: Adding test item to cart", testArt);
+    addToCart(testArt);
+  };
+
   return (
     <div className="fixed bottom-20 left-6 bg-black text-white p-3 rounded text-xs z-50 max-w-xs">
       <div className="font-bold">Cart Debug:</div>
@@ -24,6 +30,12 @@ export function CartDebug() {
       {storageData && (
         <div>Storage Items: {JSON.parse(storageData).items?.length || 0}</div>
       )}
+      <button
+        onClick={testAddToCart}
+        className="bg-red-600 text-white px-2 py-1 rounded mt-2 text-xs"
+      >
+        Test Add Item
+      </button>
       <pre className="text-xs mt-2 max-h-20 overflow-auto">
         {JSON.stringify(
           cart.items.map((item) => ({
