@@ -12,24 +12,26 @@ const initialCart: Cart = {
 };
 
 export function useCart() {
-  const [cart, setCart] = useState<Cart>(initialCart);
-
-  // Load cart from localStorage on mount
-  useEffect(() => {
-    const savedCart = localStorage.getItem(CART_STORAGE_KEY);
-    if (savedCart) {
-      try {
-        const parsedCart = JSON.parse(savedCart);
-        setCart(parsedCart);
-      } catch (error) {
-        console.error("Error loading cart from localStorage:", error);
+  const [cart, setCart] = useState<Cart>(() => {
+    // Initialize cart from localStorage on first render
+    if (typeof window !== "undefined") {
+      const savedCart = localStorage.getItem(CART_STORAGE_KEY);
+      if (savedCart) {
+        try {
+          return JSON.parse(savedCart);
+        } catch (error) {
+          console.error("Error loading cart from localStorage:", error);
+        }
       }
     }
-  }, []);
+    return initialCart;
+  });
 
   // Save cart to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+    if (typeof window !== "undefined") {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+    }
   }, [cart]);
 
   const calculateTotals = (items: CartItem[]): Partial<Cart> => {
