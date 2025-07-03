@@ -33,7 +33,7 @@ const teamMembers = [
     role: "CTO & Co-Founder",
     image:
       "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
-    bio: "Ex-OpenAI engineer passionate about democratizing AI art creation and blockchain technology.",
+    bio: "Former tech engineer passionate about democratizing digital art creation and blockchain technology.",
   },
   {
     name: "Elena Vasquez",
