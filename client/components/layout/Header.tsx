@@ -45,9 +45,14 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-background via-primary/5 to-secondary/5 backdrop-blur supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="container flex h-16 items-center">
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-full bg-gradient-to-r from-primary to-secondary"></div>
-          <span className="font-display text-xl font-bold">ArtGen</span>
+        <Link
+          to="/"
+          className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+        >
+          <div className="h-8 w-8 rounded-full bg-gradient-to-br from-primary via-accent to-secondary shadow-lg animate-pulse"></div>
+          <span className="font-display text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            ArtGen
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
