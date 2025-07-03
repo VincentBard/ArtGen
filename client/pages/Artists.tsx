@@ -78,7 +78,7 @@ const artists = [
     name: "Maya Patel",
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    bio: "Nature-inspired digital artist exploring organic forms and natural patterns through AI. Maya's work celebrates the beauty of the natural world.",
+    bio: "Nature-inspired digital artist exploring organic forms and natural patterns through digital media. Maya's work celebrates the beauty of the natural world.",
     location: "Mumbai, India",
     joinedYear: 2023,
     specialties: ["Abstract", "Nature", "Organic Forms"],
