@@ -67,7 +67,19 @@ export function useCart() {
       }
 
       const totals = calculateTotals(newItems);
-      const newCart = { ...prevCart, items: newItems, ...totals };
+      const newCart = {
+        items: newItems,
+        subtotal: totals.subtotal || 0,
+        tax: totals.tax || 0,
+        shipping: totals.shipping || 0,
+        total: totals.total || 0,
+      };
+
+      // Force immediate localStorage update
+      if (typeof window !== "undefined") {
+        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newCart));
+      }
+
       return newCart;
     });
   };
