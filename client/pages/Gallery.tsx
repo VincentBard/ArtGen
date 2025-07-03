@@ -417,7 +417,7 @@ export default function Gallery() {
 
       <Footer />
       <FloatingCart />
-      <CartDebug />
+      <CartDebug key={getItemCount()} />
       <CartTest />
     </div>
   );
