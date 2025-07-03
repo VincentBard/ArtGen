@@ -1,15 +1,8 @@
 import { useCart } from "@/hooks/useCart";
 import { mockArtPieces } from "@/data/mockArt";
-import { useEffect, useState } from "react";
 
 export function CartDebug() {
   const { cart, getItemCount, addToCart } = useCart();
-  const [forceRender, setForceRender] = useState(0);
-
-  // Force re-render when cart changes
-  useEffect(() => {
-    setForceRender((prev) => prev + 1);
-  }, [cart, cart.items.length, cart.total]);
 
   if (process.env.NODE_ENV !== "development") {
     return null;
