@@ -94,28 +94,44 @@ export function Header() {
         {/* Right Side Actions */}
         <div className="flex items-center space-x-2 ml-auto">
           {/* Search Button for Mobile */}
-          <Button variant="ghost" size="icon" className="md:hidden">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="md:hidden hover:bg-primary/10"
+          >
             <Search className="h-5 w-5" />
           </Button>
 
           {/* Wishlist */}
-          <Button variant="ghost" size="icon">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="hover:bg-secondary/10 hover:text-secondary"
+          >
             <Heart className="h-5 w-5" />
           </Button>
 
           {/* User Account */}
-          <Button variant="ghost" size="icon">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="hover:bg-primary/10 hover:text-primary"
+          >
             <User className="h-5 w-5" />
           </Button>
 
           {/* Shopping Cart */}
           <Link to="/cart">
-            <Button variant="ghost" size="icon" className="relative">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="relative hover:bg-accent/20 hover:text-accent-foreground"
+            >
               <ShoppingCart className="h-5 w-5" />
               {getItemCount() > 0 && (
                 <Badge
                   variant="destructive"
-                  className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 text-xs"
+                  className="absolute -top-1 -right-1 h-5 w-5 rounded-full p-0 text-xs bg-gradient-to-r from-secondary to-destructive animate-pulse"
                 >
                   {getItemCount()}
                 </Badge>
