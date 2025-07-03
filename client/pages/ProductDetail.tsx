@@ -191,26 +191,7 @@ export default function ProductDetail() {
               </div>
             </div>
 
-            {/* Image Thumbnails */}
-            <div className="flex gap-2">
-              {images.map((image, index) => (
-                <button
-                  key={index}
-                  onClick={() => setSelectedImage(index)}
-                  className={`w-20 h-24 rounded-lg overflow-hidden border-2 transition-colors ${
-                    selectedImage === index
-                      ? "border-primary"
-                      : "border-transparent hover:border-muted-foreground"
-                  }`}
-                >
-                  <img
-                    src={image}
-                    alt={`View ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
-            </div>
+            {/* Single image - no thumbnails needed */}
           </div>
 
           {/* Product Information */}
