@@ -95,6 +95,7 @@ const getRandomAwards = () => {
 };
 
 const artists = generateArtistData();
+console.log("Generated artists:", artists.length, artists);
 
 export default function Artists() {
   const [searchQuery, setSearchQuery] = useState("");
