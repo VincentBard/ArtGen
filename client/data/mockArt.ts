@@ -187,211 +187,241 @@ export const mockArtPieces: ArtPiece[] = [
     title: "Ethereal Dreams",
     artist: {
       name: "Luna Martinez",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b1e5?w=150&h=150&fit=crop&crop=face",
+      avatar:
+        "https://images.unsplash.com/photo-1494790108755-2616b612b1e5?w=150&h=150&fit=crop&crop=face",
       bio: "Digital artist specializing in surreal landscapes and ethereal compositions.",
     },
     style: "Surrealism",
     dimensions: { width: 24, height: 36, unit: "in" },
     price: 850,
     currency: "USD",
-    image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=1200&fit=crop",
-    description: "A mesmerizing blend of reality and fantasy, this piece explores the liminal space between dreams and consciousness.",
+    image:
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=1200&fit=crop",
+    description:
+      "A mesmerizing blend of reality and fantasy, this piece explores the liminal space between dreams and consciousness.",
     medium: "Digital Print on Canvas",
     year: 2024,
     edition: { current: 3, total: 25 },
     tags: ["abstract", "dreams", "purple", "mystical"],
     inStock: true,
-    featured: true
+    featured: true,
   },
   {
     id: "10",
     title: "Urban Solitude",
     artist: {
       name: "Jasper Lee",
-      avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop&crop=face",
+      avatar:
+        "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop&crop=face",
       bio: "Painter capturing moments of isolation in crowded cityscapes.",
     },
     style: "Modern Realism",
     dimensions: { width: 30, height: 40, unit: "in" },
     price: 1200,
     currency: "USD",
-    image: "https://images.unsplash.com/photo-1603791452906-cfdb7f021ec6?w=800&h=1200&fit=crop",
-    description: "A lone figure walks through a rain-soaked alley, the city humming quietly in the background.",
+    image:
+      "https://images.unsplash.com/photo-1603791452906-cfdb7f021ec6?w=800&h=1200&fit=crop",
+    description:
+      "A lone figure walks through a rain-soaked alley, the city humming quietly in the background.",
     medium: "Oil on Canvas",
     year: 2023,
     edition: { current: 1, total: 1 },
     tags: ["city", "lonely", "moody", "blue tones"],
     inStock: true,
-    featured: false
+    featured: false,
   },
   {
     id: "11",
     title: "Nebula Pulse",
     artist: {
       name: "Luna Martinez",
-      avatar: "https://images.unsplash.com/photo-1494790108755-2616b612b1e5?w=150&h=150&fit=crop&crop=face",
+      avatar:
+        "https://images.unsplash.com/photo-1494790108755-2616b612b1e5?w=150&h=150&fit=crop&crop=face",
       bio: "Digital artist specializing in surreal landscapes and ethereal compositions.",
     },
     style: "Abstract",
     dimensions: { width: 20, height: 30, unit: "in" },
     price: 720,
     currency: "USD",
-    image: "https://images.unsplash.com/photo-1602526212335-842c7bded05b?w=800&h=1200&fit=crop",
-    description: "Vivid hues of violet and orange dance through a swirling nebula-like form, representing cosmic energy.",
+    image:
+      "https://images.unsplash.com/photo-1602526212335-842c7bded05b?w=800&h=1200&fit=crop",
+    description:
+      "Vivid hues of violet and orange dance through a swirling nebula-like form, representing cosmic energy.",
     medium: "Digital Print on Aluminum",
     year: 2024,
     edition: { current: 10, total: 50 },
     tags: ["space", "vibrant", "cosmic", "digital"],
     inStock: true,
-    featured: false
+    featured: false,
   },
   {
     id: "12",
     title: "Golden Reverie",
     artist: {
       name: "Sofia Kim",
-      avatar: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
+      avatar:
+        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
       bio: "Mixed media artist with a focus on organic textures and dreamlike symbolism.",
     },
     style: "Impressionism",
     dimensions: { width: 18, height: 24, unit: "in" },
     price: 950,
     currency: "USD",
-    image: "https://images.unsplash.com/photo-1582555055174-3b5f18d3e4ec?w=800&h=1200&fit=crop",
-    description: "A field of golden wheat bathed in morning light, captured with expressive strokes and layered texture.",
+    image:
+      "https://images.unsplash.com/photo-1582555055174-3b5f18d3e4ec?w=800&h=1200&fit=crop",
+    description:
+      "A field of golden wheat bathed in morning light, captured with expressive strokes and layered texture.",
     medium: "Acrylic and Gold Leaf on Wood",
     year: 2022,
     edition: { current: 1, total: 1 },
     tags: ["nature", "sunlight", "organic", "gold"],
     inStock: true,
-    featured: true
+    featured: true,
   },
   {
     id: "13",
     title: "Code and Chaos",
     artist: {
       name: "Theo Nakamura",
-      avatar: "https://images.unsplash.com/photo-1502767089025-6572583495ff?w=150&h=150&fit=crop&crop=face",
+      avatar:
+        "https://images.unsplash.com/photo-1502767089025-6572583495ff?w=150&h=150&fit=crop&crop=face",
       bio: "Generative artist exploring the intersection of code and emotion.",
     },
     style: "Generative Art",
     dimensions: { width: 36, height: 36, unit: "in" },
     price: 1100,
     currency: "USD",
-    image: "https://images.unsplash.com/photo-1635233758741-059f36b48ef3?w=800&h=1200&fit=crop",
-    description: "A chaotic yet harmonious visual symphony created with algorithmic randomness.",
+    image:
+      "https://images.unsplash.com/photo-1635233758741-059f36b48ef3?w=800&h=1200&fit=crop",
+    description:
+      "A chaotic yet harmonious visual symphony created with algorithmic randomness.",
     medium: "Archival Digital Print",
     year: 2025,
     edition: { current: 5, total: 10 },
     tags: ["tech", "algorithm", "abstract", "AI"],
     inStock: true,
-    featured: false
+    featured: false,
   },
   {
     id: "14",
     title: "Through the Fog",
     artist: {
       name: "Jasper Lee",
-      avatar: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop&crop=face",
+      avatar:
+        "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=150&h=150&fit=crop&crop=face",
       bio: "Painter capturing moments of isolation in crowded cityscapes.",
     },
     style: "Contemporary",
     dimensions: { width: 22, height: 30, unit: "in" },
     price: 980,
     currency: "USD",
-    image: "https://images.unsplash.com/photo-1613553507747-3fef70b395b0?w=800&h=1200&fit=crop",
-    description: "Soft muted grays and silhouettes evoke the feeling of wandering through morning mist.",
+    image:
+      "https://images.unsplash.com/photo-1613553507747-3fef70b395b0?w=800&h=1200&fit=crop",
+    description:
+      "Soft muted grays and silhouettes evoke the feeling of wandering through morning mist.",
     medium: "Oil on Linen",
     year: 2023,
     edition: { current: 1, total: 1 },
     tags: ["mist", "gray", "quiet", "city"],
     inStock: false,
-    featured: false
+    featured: false,
   },
   {
     id: "15",
     title: "Ocean Mind",
     artist: {
       name: "Ava Moreau",
-      avatar: "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=150&h=150&fit=crop&crop=face",
+      avatar:
+        "https://images.unsplash.com/photo-1544725176-7c40e5a2c9f9?w=150&h=150&fit=crop&crop=face",
       bio: "Marine-inspired painter exploring water as metaphor and medium.",
     },
     style: "Minimalism",
     dimensions: { width: 40, height: 20, unit: "in" },
     price: 670,
     currency: "USD",
-    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&h=1200&fit=crop",
-    description: "A minimalist expression of the subconscious mind, represented by layered waves and ripples.",
+    image:
+      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?w=800&h=1200&fit=crop",
+    description:
+      "A minimalist expression of the subconscious mind, represented by layered waves and ripples.",
     medium: "Watercolor and Ink on Paper",
     year: 2024,
     edition: { current: 2, total: 10 },
     tags: ["ocean", "waves", "blue", "calm"],
     inStock: true,
-    featured: false
+    featured: false,
   },
   {
     id: "16",
     title: "Fragmented Identity",
     artist: {
       name: "Kairo Bennett",
-      avatar: "https://images.unsplash.com/photo-1603415526960-f8f7cb6ef337?w=150&h=150&fit=crop&crop=face",
+      avatar:
+        "https://images.unsplash.com/photo-1603415526960-f8f7cb6ef337?w=150&h=150&fit=crop&crop=face",
       bio: "Collage artist focused on themes of identity and memory.",
     },
     style: "Collage",
     dimensions: { width: 16, height: 20, unit: "in" },
     price: 430,
     currency: "USD",
-    image: "https://images.unsplash.com/photo-1599407614615-68e55a276e6a?w=800&h=1200&fit=crop",
-    description: "Vintage photographs and textures merge to reveal the fractured self beneath the surface.",
+    image:
+      "https://images.unsplash.com/photo-1599407614615-68e55a276e6a?w=800&h=1200&fit=crop",
+    description:
+      "Vintage photographs and textures merge to reveal the fractured self beneath the surface.",
     medium: "Mixed Media on Board",
     year: 2023,
     edition: { current: 1, total: 1 },
     tags: ["identity", "vintage", "cutout", "emotion"],
     inStock: true,
-    featured: false
+    featured: false,
   },
   {
     id: "17",
     title: "Celestial Bloom",
     artist: {
       name: "Sofia Kim",
-      avatar: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
+      avatar:
+        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
       bio: "Mixed media artist with a focus on organic textures and dreamlike symbolism.",
     },
     style: "Fantasy Art",
     dimensions: { width: 28, height: 28, unit: "in" },
     price: 890,
     currency: "USD",
-    image: "https://images.unsplash.com/photo-1505489304219-3675c78c7259?w=800&h=1200&fit=crop",
-    description: "Otherworldly flowers bloom against a cosmic backdrop, blending flora and stars.",
+    image:
+      "https://images.unsplash.com/photo-1505489304219-3675c78c7259?w=800&h=1200&fit=crop",
+    description:
+      "Otherworldly flowers bloom against a cosmic backdrop, blending flora and stars.",
     medium: "Acrylic and Resin on Canvas",
     year: 2025,
     edition: { current: 2, total: 15 },
     tags: ["floral", "cosmos", "pink", "texture"],
     inStock: true,
-    featured: true
+    featured: true,
   },
   {
     id: "18",
     title: "Syntax Error",
     artist: {
       name: "Theo Nakamura",
-      avatar: "https://images.unsplash.com/photo-1502767089025-6572583495ff?w=150&h=150&fit=crop&crop=face",
+      avatar:
+        "https://images.unsplash.com/photo-1502767089025-6572583495ff?w=150&h=150&fit=crop&crop=face",
       bio: "Generative artist exploring the intersection of code and emotion.",
     },
     style: "Cyberpunk",
     dimensions: { width: 30, height: 30, unit: "in" },
     price: 990,
     currency: "USD",
-    image: "https://images.unsplash.com/photo-1588776814546-b38c7129f5c6?w=800&h=1200&fit=crop",
-    description: "Glitched lines, neon overlays, and corrupted forms represent human error in a digital world.",
+    image:
+      "https://images.unsplash.com/photo-1588776814546-b38c7129f5c6?w=800&h=1200&fit=crop",
+    description:
+      "Glitched lines, neon overlays, and corrupted forms represent human error in a digital world.",
     medium: "Generative Digital Print",
     year: 2024,
     edition: { current: 4, total: 8 },
-    tags: ["glitch", "neon", "AI", "digital"],
+    tags: ["glitch", "neon", "digital", "code"],
     inStock: true,
-    featured: false
-  }
+    featured: false,
+  },
 ];
 
 export const featuredArtPieces = mockArtPieces.filter(
