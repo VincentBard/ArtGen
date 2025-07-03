@@ -216,9 +216,9 @@ export default function Artists() {
             </span>
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Discover the talented digital artists behind our stunning
-            AI-generated artworks. Each artist brings their unique vision and
-            expertise to create extraordinary pieces.
+            Discover the talented digital artists behind our stunning digital
+            artworks. Each artist brings their unique vision and expertise to
+            create extraordinary pieces.
           </p>
         </div>
 
