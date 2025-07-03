@@ -297,11 +297,35 @@ export default function Gallery() {
           {/* Main Content */}
           <main className="flex-1">
             {/* Results Header */}
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
               <p className="text-muted-foreground">
                 Showing {filteredArtPieces.length} of {mockArtPieces.length}{" "}
                 artworks
               </p>
+
+              {/* Cart Actions */}
+              {getItemCount() > 0 && (
+                <div className="flex items-center gap-3">
+                  <div className="text-sm text-muted-foreground">
+                    {getItemCount()} item{getItemCount() !== 1 ? "s" : ""} in
+                    cart
+                  </div>
+                  <div className="flex gap-2">
+                    <Button asChild variant="outline" size="sm">
+                      <Link to="/cart">
+                        <ShoppingCart className="mr-2 h-4 w-4" />
+                        View Cart
+                      </Link>
+                    </Button>
+                    <Button asChild size="sm">
+                      <Link to="/checkout">
+                        Checkout Now
+                        <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              )}
 
               {/* Active Filters */}
               {activeFilterCount > 0 && (
