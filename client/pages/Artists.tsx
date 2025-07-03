@@ -27,144 +27,74 @@ import { ArtCard } from "@/components/art/ArtCard";
 import { mockArtPieces, availableStyles } from "@/data/mockArt";
 import { cn } from "@/lib/utils";
 
-// Enhanced artist data
-const artists = [
-  {
-    id: "1",
-    name: "Luna Martinez",
-    avatar:
-      "https://images.unsplash.com/photo-1494790108755-2616b612b1e5?w=150&h=150&fit=crop&crop=face",
-    bio: "Digital artist specializing in surreal landscapes and ethereal compositions. Luna's work explores the intersection of dreams and reality through innovative digital techniques.",
-    location: "Barcelona, Spain",
-    joinedYear: 2023,
-    specialties: ["Surrealism", "Abstract", "Digital Art"],
-    artworkCount: 12,
-    featured: true,
-    awards: [
-      "Digital Art Innovation Award 2024",
-      "Digital Dreams Contest Winner",
-    ],
-    social: {
-      website: "https://lunamartinez.art",
-      instagram: "@luna_digital_dreams",
-    },
-    stats: {
-      followers: 2500,
-      likes: 15000,
-      collections: 8,
-    },
-  },
-  {
-    id: "2",
-    name: "Alex Chen",
-    avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    bio: "Cyberpunk artist creating futuristic urban visions. Alex combines traditional cyberpunk aesthetics with cutting-edge digital techniques.",
-    location: "Tokyo, Japan",
-    joinedYear: 2022,
-    specialties: ["Cyberpunk", "Sci-Fi", "Urban Art"],
-    artworkCount: 18,
-    featured: true,
-    awards: ["Neon Nights Competition Winner", "Future Visions Award"],
-    social: {
-      website: "https://alexchen.digital",
-      instagram: "@alex_cyber_artist",
-    },
-    stats: {
-      followers: 3200,
-      likes: 22000,
-      collections: 12,
-    },
-  },
-  {
-    id: "3",
-    name: "Maya Patel",
-    avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-    bio: "Nature-inspired digital artist exploring organic forms and natural patterns through digital media. Maya's work celebrates the beauty of the natural world.",
-    location: "Mumbai, India",
-    joinedYear: 2023,
-    specialties: ["Abstract", "Nature", "Organic Forms"],
-    artworkCount: 9,
-    featured: false,
-    awards: ["Organic Beauty Award 2024"],
-    social: {
-      website: "https://mayapatel.art",
-      instagram: "@maya_nature_art",
-    },
-    stats: {
-      followers: 1800,
-      likes: 12000,
-      collections: 6,
-    },
-  },
-  {
-    id: "4",
-    name: "David Kim",
-    avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-    bio: "Space and cosmos themed digital artist. David creates breathtaking celestial scenes that invite viewers to explore the infinite universe.",
-    location: "Los Angeles, USA",
-    joinedYear: 2022,
-    specialties: ["Space Art", "Cosmic", "Astronomy"],
-    artworkCount: 15,
-    featured: true,
-    awards: ["Cosmic Visions Award", "Space Art Excellence 2023"],
-    social: {
-      website: "https://davidkim.space",
-      instagram: "@david_cosmic_art",
-    },
-    stats: {
-      followers: 2900,
-      likes: 18000,
-      collections: 10,
-    },
-  },
-  {
-    id: "5",
-    name: "Sarah Johnson",
-    avatar:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face",
-    bio: "Post-apocalyptic and dystopian digital artist. Sarah's haunting visions explore themes of resilience and beauty in destruction.",
-    location: "London, UK",
-    joinedYear: 2023,
-    specialties: ["Post-Apocalyptic", "Dystopian", "Dark Art"],
-    artworkCount: 11,
-    featured: false,
-    awards: ["Dark Futures Award 2024"],
-    social: {
-      website: "https://sarahjohnson.dark",
-      instagram: "@sarah_dark_visions",
-    },
-    stats: {
-      followers: 2100,
-      likes: 14000,
-      collections: 7,
-    },
-  },
-  {
-    id: "6",
-    name: "Emma Rodriguez",
-    avatar:
-      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&h=150&fit=crop&crop=face",
-    bio: "Botanical and nature-inspired digital artist. Emma's delicate compositions celebrate the intricate beauty of plant life and botanical forms.",
-    location: "Madrid, Spain",
-    joinedYear: 2023,
-    specialties: ["Botanical", "Nature", "Floral"],
-    artworkCount: 8,
-    featured: false,
-    awards: ["Botanical Beauty Award"],
-    social: {
-      website: "https://emmarodriguez.garden",
-      instagram: "@emma_botanical_art",
-    },
-    stats: {
-      followers: 1600,
-      likes: 9500,
-      collections: 5,
-    },
-  },
-];
+// Generate artist data from artwork collection
+const generateArtistData = () => {
+  const artistMap = new Map();
+
+  mockArtPieces.forEach((artwork, index) => {
+    const artistName = artwork.artist.name;
+    if (!artistMap.has(artistName)) {
+      const artistArtworks = mockArtPieces.filter(
+        (piece) => piece.artist.name === artistName,
+      );
+      const styles = [...new Set(artistArtworks.map((piece) => piece.style))];
+      const featured = artistArtworks.some((piece) => piece.featured);
+
+      artistMap.set(artistName, {
+        id: `artist-${index}`,
+        name: artistName,
+        avatar: artwork.artist.avatar,
+        bio:
+          artwork.artist.bio ||
+          "Talented digital artist creating unique visual experiences.",
+        location: getRandomLocation(),
+        joinedYear: Math.floor(Math.random() * 3) + 2022, // 2022-2024
+        specialties: styles,
+        artworkCount: artistArtworks.length,
+        featured: featured,
+        awards: getRandomAwards(),
+        social: {
+          website: `https://${artistName.toLowerCase().replace(" ", "")}.art`,
+          instagram: `@${artistName.toLowerCase().replace(" ", "_")}_art`,
+        },
+        stats: {
+          followers: Math.floor(Math.random() * 3000) + 1500,
+          likes: Math.floor(Math.random() * 20000) + 10000,
+          collections: Math.floor(Math.random() * 10) + 5,
+        },
+      });
+    }
+  });
+
+  return Array.from(artistMap.values());
+};
+
+const getRandomLocation = () => {
+  const locations = [
+    "New York, USA",
+    "London, UK",
+    "Tokyo, Japan",
+    "Paris, France",
+    "Barcelona, Spain",
+    "Berlin, Germany",
+    "Los Angeles, USA",
+    "Sydney, Australia",
+  ];
+  return locations[Math.floor(Math.random() * locations.length)];
+};
+
+const getRandomAwards = () => {
+  const awards = [
+    ["Digital Art Excellence Award 2024"],
+    ["Contemporary Art Prize", "Digital Innovation Award"],
+    ["Emerging Artist Award 2023"],
+    ["International Digital Art Competition Winner"],
+    [],
+  ];
+  return awards[Math.floor(Math.random() * awards.length)];
+};
+
+const artists = generateArtistData();
 
 export default function Artists() {
   const [searchQuery, setSearchQuery] = useState("");
