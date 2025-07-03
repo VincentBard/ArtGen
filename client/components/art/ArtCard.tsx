@@ -9,6 +9,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useToast } from "@/components/ui/use-toast";
 import { ArtPiece } from "@shared/types";
 import { useCart } from "@/hooks/useCart";
 import { useState } from "react";
