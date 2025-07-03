@@ -104,7 +104,7 @@ const collections: Collection[] = [
     id: "4",
     title: "Nature's Algorithms",
     description:
-      "Discover how AI interprets the natural world through organic forms, botanical studies, and abstract representations of nature's patterns.",
+      "Discover how digital artists interpret the natural world through organic forms, botanical studies, and abstract representations of nature's patterns.",
     coverImage:
       "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=800&h=600&fit=crop",
     artworkCount: 15,
