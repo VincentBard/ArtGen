@@ -182,18 +182,18 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  ArtGen was born from a simple yet powerful belief: artificial
-                  intelligence and human creativity are not competing forces,
-                  but complementary ones that can create something truly
+                  ArtGen was born from a simple yet powerful belief: digital
+                  technology and human creativity are not competing forces, but
+                  complementary ones that can create something truly
                   extraordinary together.
                 </p>
                 <p>
-                  Founded in 2022 by a team of AI researchers, artists, and
-                  technology enthusiasts, we set out to create the world's first
-                  comprehensive platform for AI-generated art. We recognized
-                  that while AI could generate incredible visual content, it
+                  Founded in 2022 by a team of digital artists, curators, and
+                  technology enthusiasts, we set out to create the world's
+                  premier platform for digital art. We recognized that while
+                  technology could enable incredible visual possibilities, it
                   took human vision, curation, and artistic sensibility to
-                  transform that content into meaningful art.
+                  transform those possibilities into meaningful art.
                 </p>
                 <p>
                   Today, we're proud to be home to over 500 talented digital
