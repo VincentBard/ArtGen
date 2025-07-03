@@ -17,11 +17,9 @@ export function useCart() {
   // Load cart from localStorage on mount
   useEffect(() => {
     const savedCart = localStorage.getItem(CART_STORAGE_KEY);
-    console.log("useCart: Loading cart from localStorage", savedCart);
     if (savedCart) {
       try {
         const parsedCart = JSON.parse(savedCart);
-        console.log("useCart: Parsed cart from localStorage", parsedCart);
         setCart(parsedCart);
       } catch (error) {
         console.error("Error loading cart from localStorage:", error);
@@ -31,7 +29,6 @@ export function useCart() {
 
   // Save cart to localStorage whenever it changes
   useEffect(() => {
-    console.log("useCart: Saving cart to localStorage", cart);
     localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
   }, [cart]);
 
