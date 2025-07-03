@@ -18,12 +18,15 @@ export function useCart() {
       const savedCart = localStorage.getItem(CART_STORAGE_KEY);
       if (savedCart) {
         try {
-          return JSON.parse(savedCart);
+          const parsed = JSON.parse(savedCart);
+          console.log("useCart: Loaded from localStorage", parsed);
+          return parsed;
         } catch (error) {
           console.error("Error loading cart from localStorage:", error);
         }
       }
     }
+    console.log("useCart: Using initial cart", initialCart);
     return initialCart;
   });
 
