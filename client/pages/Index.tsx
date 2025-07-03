@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ArtCard } from "@/components/art/ArtCard";
+import { FloatingCart } from "@/components/cart/FloatingCart";
 import { featuredArtPieces, availableStyles } from "@/data/mockArt";
 
 export default function Index() {
