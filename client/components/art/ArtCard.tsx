@@ -22,6 +22,7 @@ interface ArtCardProps {
 
 export function ArtCard({ artPiece, className }: ArtCardProps) {
   const { addToCart, isInCart } = useCart();
+  const { toast } = useToast();
   const [isHovered, setIsHovered] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -30,6 +31,11 @@ export function ArtCard({ artPiece, className }: ArtCardProps) {
     e.stopPropagation();
     console.log("Adding to cart:", artPiece.title, artPiece.id);
     addToCart(artPiece);
+
+    toast({
+      title: "Added to cart!",
+      description: `"${artPiece.title}" by ${artPiece.artist.name}`,
+    });
   };
 
   const formatPrice = (price: number, currency: string) => {
