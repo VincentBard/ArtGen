@@ -315,10 +315,10 @@ export default function Gallery() {
 
               {/* Cart Actions */}
               {getItemCount() > 0 && (
-                <div className="flex items-center gap-3">
-                  <div className="text-sm text-muted-foreground">
-                    {getItemCount()} item{getItemCount() !== 1 ? "s" : ""} in
-                    cart
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 p-3 bg-accent/10 rounded-lg border">
+                  <div className="text-sm font-medium text-accent-foreground">
+                    🛒 {getItemCount()} item{getItemCount() !== 1 ? "s" : ""} in
+                    your cart
                   </div>
                   <div className="flex gap-2">
                     <Button asChild variant="outline" size="sm">
@@ -327,7 +327,11 @@ export default function Gallery() {
                         View Cart
                       </Link>
                     </Button>
-                    <Button asChild size="sm">
+                    <Button
+                      asChild
+                      size="sm"
+                      className="bg-accent hover:bg-accent/90"
+                    >
                       <Link to="/checkout">
                         Checkout Now
                         <ArrowRight className="ml-2 h-4 w-4" />
