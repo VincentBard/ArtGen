@@ -37,6 +37,7 @@ import { cn } from "@/lib/utils";
 
 export default function Gallery() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const { getItemCount } = useCart();
   const [searchQuery, setSearchQuery] = useState(
     searchParams.get("search") || "",
   );
