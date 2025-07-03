@@ -416,6 +416,7 @@ export default function Gallery() {
 
       <Footer />
       <FloatingCart />
+      <CartDebug />
     </div>
   );
 }
