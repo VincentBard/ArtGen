@@ -21,21 +21,30 @@ interface ArtCardProps {
 }
 
 export function ArtCard({ artPiece, className }: ArtCardProps) {
-  const { addToCart, isInCart } = useCart();
+  const { addToCart, isInCart, getItemQuantity } = useCart();
   const { toast } = useToast();
   const [isHovered, setIsHovered] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isAdding, setIsAdding] = useState(false);
 
-  const handleAddToCart = (e: React.MouseEvent) => {
+  const handleAddToCart = async (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+
+    setIsAdding(true);
     console.log("Adding to cart:", artPiece.title, artPiece.id);
+
+    // Add to cart
     addToCart(artPiece);
 
+    // Show toast
     toast({
       title: "Added to cart!",
       description: `"${artPiece.title}" by ${artPiece.artist.name}`,
     });
+
+    // Reset loading state after a short delay
+    setTimeout(() => setIsAdding(false), 1000);
   };
 
   const formatPrice = (price: number, currency: string) => {
