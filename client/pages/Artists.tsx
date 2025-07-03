@@ -165,7 +165,7 @@ const artists = [
 
 export default function Artists() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedSpecialty, setSelectedSpecialty] = useState<string>("");
+  const [selectedSpecialty, setSelectedSpecialty] = useState<string>("all");
   const [sortBy, setSortBy] = useState<string>("featured");
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
