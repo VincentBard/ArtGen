@@ -27,6 +27,7 @@ export function ArtCard({ artPiece, className }: ArtCardProps) {
   const handleAddToCart = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    console.log("Adding to cart:", artPiece.title, artPiece.id);
     addToCart(artPiece);
   };
 
