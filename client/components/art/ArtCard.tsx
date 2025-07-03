@@ -32,7 +32,6 @@ export function ArtCard({ artPiece, className }: ArtCardProps) {
     e.stopPropagation();
 
     setIsAdding(true);
-    console.log("Adding to cart:", artPiece.title, artPiece.id);
 
     // Add to cart
     addToCart(artPiece);
