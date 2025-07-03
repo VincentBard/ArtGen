@@ -31,6 +31,7 @@ import { Footer } from "@/components/layout/Footer";
 import { ArtCard } from "@/components/art/ArtCard";
 import { FilterSidebar } from "@/components/art/FilterSidebar";
 import { FloatingCart } from "@/components/cart/FloatingCart";
+import { CartDebug } from "@/components/cart/CartDebug";
 import { useCart } from "@/hooks/useCart";
 import { SearchFilters } from "@shared/types";
 import { mockArtPieces } from "@/data/mockArt";
