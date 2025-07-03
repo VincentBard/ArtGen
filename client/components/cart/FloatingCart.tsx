@@ -41,7 +41,7 @@ export function FloatingCart() {
             <ShoppingCart className="h-6 w-6" />
             <Badge
               variant="destructive"
-              className="absolute -top-2 -right-2 h-6 w-6 rounded-full p-0 text-xs font-bold"
+              className="absolute -top-2 -right-2 h-6 w-6 rounded-full p-0 text-xs font-bold flex items-center justify-center"
             >
               {getItemCount()}
             </Badge>
