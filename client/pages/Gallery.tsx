@@ -30,6 +30,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { ArtCard } from "@/components/art/ArtCard";
 import { FilterSidebar } from "@/components/art/FilterSidebar";
+import { FloatingCart } from "@/components/cart/FloatingCart";
 import { useCart } from "@/hooks/useCart";
 import { SearchFilters } from "@shared/types";
 import { mockArtPieces } from "@/data/mockArt";
