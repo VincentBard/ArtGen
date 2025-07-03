@@ -1,4 +1,4 @@
-import { useState, useEffect, createContext, useContext, ReactNode } from "react";
+import { useState, useEffect } from "react";
 import { Cart, CartItem, ArtPiece } from "@shared/types";
 
 const CART_STORAGE_KEY = "artgallery_cart";
@@ -11,54 +11,47 @@ const initialCart: Cart = {
   shipping: 0,
 };
 
-// Create cart context
-interface CartContextType {
-  cart: Cart;
-  addToCart: (artPiece: ArtPiece, quantity?: number) => void;
-  removeFromCart: (artPieceId: string) => void;
-  updateQuantity: (artPieceId: string, quantity: number) => void;
-  clearCart: () => void;
-  getItemCount: () => number;
-  isInCart: (artPieceId: string) => boolean;
-  getItemQuantity: (artPieceId: string) => number;
-}
+// Global cart state to share between all components
+let globalCart: Cart = initialCart;
+let listeners: Array<(cart: Cart) => void> = [];
 
-const CartContext = createContext<CartContextType | undefined>(undefined);
-
-export function CartProvider({ children }: { children: ReactNode }) {
-  const cartMethods = useCartMethods();
-  return (
-    <CartContext.Provider value={cartMethods}>
-      {children}
-    </CartContext.Provider>
-  );
-}
-
-function useCartMethods() {
+// Function to notify all listeners of cart changes
+const notifyListeners = (newCart: Cart) => {
+  globalCart = newCart;
+  listeners.forEach((listener) => listener(newCart));
+};
 
 export function useCart() {
   const [cart, setCart] = useState<Cart>(() => {
-    // Initialize cart from localStorage on first render
-    if (typeof window !== 'undefined') {
+    // Initialize from localStorage or global state
+    if (typeof window !== "undefined") {
       const savedCart = localStorage.getItem(CART_STORAGE_KEY);
       if (savedCart) {
         try {
           const parsed = JSON.parse(savedCart);
-          console.log("useCart: Loaded from localStorage", parsed);
+          globalCart = parsed;
           return parsed;
         } catch (error) {
           console.error("Error loading cart from localStorage:", error);
         }
       }
     }
-    console.log("useCart: Using initial cart", initialCart);
-    return initialCart;
+    return globalCart;
   });
+
+  // Subscribe to global cart changes
+  useEffect(() => {
+    const listener = (newCart: Cart) => setCart(newCart);
+    listeners.push(listener);
+
+    return () => {
+      listeners = listeners.filter((l) => l !== listener);
+    };
+  }, []);
 
   // Save cart to localStorage whenever it changes
   useEffect(() => {
-    console.log("useCart: Cart state changed", cart);
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     }
   }, [cart]);
@@ -76,64 +69,62 @@ export function useCart() {
   };
 
   const addToCart = (artPiece: ArtPiece, quantity = 1) => {
-    setCart((prevCart) => {
-      const existingItemIndex = prevCart.items.findIndex(
-        (item) => item.artPiece.id === artPiece.id,
+    const existingItemIndex = globalCart.items.findIndex(
+      (item) => item.artPiece.id === artPiece.id,
+    );
+
+    let newItems: CartItem[];
+
+    if (existingItemIndex >= 0) {
+      // Update existing item
+      newItems = globalCart.items.map((item, index) =>
+        index === existingItemIndex
+          ? { ...item, quantity: item.quantity + quantity }
+          : item,
       );
+    } else {
+      // Add new item
+      newItems = [...globalCart.items, { artPiece, quantity }];
+    }
 
-      let newItems: CartItem[];
+    const totals = calculateTotals(newItems);
+    const newCart = {
+      items: newItems,
+      subtotal: totals.subtotal || 0,
+      tax: totals.tax || 0,
+      shipping: totals.shipping || 0,
+      total: totals.total || 0,
+    };
 
-      if (existingItemIndex >= 0) {
-        // Update existing item
-        newItems = prevCart.items.map((item, index) =>
-          index === existingItemIndex
-            ? { ...item, quantity: item.quantity + quantity }
-            : item,
-        );
-      } else {
-        // Add new item
-        newItems = [...prevCart.items, { artPiece, quantity }];
-      }
+    // Update global state and notify all listeners
+    notifyListeners(newCart);
 
-      const totals = calculateTotals(newItems);
-      const newCart = {
-        items: newItems,
-        subtotal: totals.subtotal || 0,
-        tax: totals.tax || 0,
-        shipping: totals.shipping || 0,
-        total: totals.total || 0
-      };
-
-      // Force immediate localStorage update
-      if (typeof window !== 'undefined') {
-        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newCart));
-      }
-
-      return newCart;
-    });
+    // Force immediate localStorage update
+    if (typeof window !== "undefined") {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newCart));
+    }
   };
 
   const removeFromCart = (artPieceId: string) => {
-    setCart((prevCart) => {
-      const newItems = prevCart.items.filter(
-        (item) => item.artPiece.id !== artPieceId,
-      );
-      const totals = calculateTotals(newItems);
-      const newCart = {
-        items: newItems,
-        subtotal: totals.subtotal || 0,
-        tax: totals.tax || 0,
-        shipping: totals.shipping || 0,
-        total: totals.total || 0
-      };
+    const newItems = globalCart.items.filter(
+      (item) => item.artPiece.id !== artPieceId,
+    );
+    const totals = calculateTotals(newItems);
+    const newCart = {
+      items: newItems,
+      subtotal: totals.subtotal || 0,
+      tax: totals.tax || 0,
+      shipping: totals.shipping || 0,
+      total: totals.total || 0,
+    };
 
-      // Force immediate localStorage update
-      if (typeof window !== 'undefined') {
-        localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newCart));
-      }
+    // Update global state and notify all listeners
+    notifyListeners(newCart);
 
-      return newCart;
-    });
+    // Force immediate localStorage update
+    if (typeof window !== "undefined") {
+      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newCart));
+    }
   };
 
   const updateQuantity = (artPieceId: string, quantity: number) => {
@@ -142,17 +133,24 @@ export function useCart() {
       return;
     }
 
-    setCart((prevCart) => {
-      const newItems = prevCart.items.map((item) =>
-        item.artPiece.id === artPieceId ? { ...item, quantity } : item,
-      );
-      const totals = calculateTotals(newItems);
-      return { ...prevCart, items: newItems, ...totals };
-    });
+    const newItems = globalCart.items.map((item) =>
+      item.artPiece.id === artPieceId ? { ...item, quantity } : item,
+    );
+    const totals = calculateTotals(newItems);
+    const newCart = {
+      items: newItems,
+      subtotal: totals.subtotal || 0,
+      tax: totals.tax || 0,
+      shipping: totals.shipping || 0,
+      total: totals.total || 0,
+    };
+
+    // Update global state and notify all listeners
+    notifyListeners(newCart);
   };
 
   const clearCart = () => {
-    setCart(initialCart);
+    notifyListeners(initialCart);
   };
 
   const getItemCount = () => {
