@@ -34,7 +34,7 @@ const artists = [
     name: "Luna Martinez",
     avatar:
       "https://images.unsplash.com/photo-1494790108755-2616b612b1e5?w=150&h=150&fit=crop&crop=face",
-    bio: "Digital artist specializing in surreal landscapes and ethereal compositions. Luna's work explores the intersection of dreams and reality through AI-generated imagery.",
+    bio: "Digital artist specializing in surreal landscapes and ethereal compositions. Luna's work explores the intersection of dreams and reality through innovative digital techniques.",
     location: "Barcelona, Spain",
     joinedYear: 2023,
     specialties: ["Surrealism", "Abstract", "Digital Art"],
