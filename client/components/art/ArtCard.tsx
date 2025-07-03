@@ -27,6 +27,10 @@ export function ArtCard({ artPiece, className }: ArtCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   const [isAdding, setIsAdding] = useState(false);
 
+  // Track current cart state for this item
+  const currentQuantity = getItemQuantity(artPiece.id);
+  const itemInCart = isInCart(artPiece.id);
+
   const handleAddToCart = async (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
