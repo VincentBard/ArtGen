@@ -56,7 +56,7 @@ const artists = [
     name: "Alex Chen",
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-    bio: "Cyberpunk artist creating futuristic urban visions. Alex combines traditional cyberpunk aesthetics with cutting-edge AI techniques.",
+    bio: "Cyberpunk artist creating futuristic urban visions. Alex combines traditional cyberpunk aesthetics with cutting-edge digital techniques.",
     location: "Tokyo, Japan",
     joinedYear: 2022,
     specialties: ["Cyberpunk", "Sci-Fi", "Urban Art"],
