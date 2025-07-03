@@ -137,7 +137,7 @@ export default function About() {
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               ArtGen is more than a marketplace – we're a community where
-              cutting-edge AI technology meets human creativity, empowering
+              cutting-edge digital tools meet human creativity, empowering
               artists to push the boundaries of digital art and helping
               collectors discover extraordinary pieces.
             </p>
