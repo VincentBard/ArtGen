@@ -26,7 +26,7 @@ const teamMembers = [
     role: "CEO & Co-Founder",
     image:
       "https://images.unsplash.com/photo-1494790108755-2616b612b1e5?w=300&h=300&fit=crop&crop=face",
-    bio: "Former AI researcher at Google with 10+ years in machine learning and digital art curation.",
+    bio: "Former tech researcher at Google with 10+ years in digital innovation and art curation.",
   },
   {
     name: "Marcus Rodriguez",
