@@ -109,7 +109,9 @@ export default function Artists() {
         .toLowerCase()
         .includes(searchQuery.toLowerCase());
       const matchesSpecialty =
-        !selectedSpecialty || artist.specialties.includes(selectedSpecialty);
+        selectedSpecialty === "" ||
+        selectedSpecialty === "all" ||
+        artist.specialties.includes(selectedSpecialty);
       return matchesSearch && matchesSpecialty;
     })
     .sort((a, b) => {
