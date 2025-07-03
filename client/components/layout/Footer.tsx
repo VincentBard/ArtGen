@@ -53,8 +53,8 @@ export function Footer() {
               Stay Inspired
             </h3>
             <p className="text-muted-foreground mb-6">
-              Get the latest AI-generated artworks, artist spotlights, and
-              exclusive offers delivered to your inbox.
+              Get the latest digital artworks, artist spotlights, and exclusive
+              offers delivered to your inbox.
             </p>
             <form className="flex gap-2 max-w-md mx-auto">
               <Input
