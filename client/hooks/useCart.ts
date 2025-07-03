@@ -1,10 +1,4 @@
-import {
-  useState,
-  useEffect,
-  createContext,
-  useContext,
-  ReactNode,
-} from "react";
+import { useState, useEffect, createContext, useContext, ReactNode } from "react";
 import { Cart, CartItem, ArtPiece } from "@shared/types";
 
 const CART_STORAGE_KEY = "artgallery_cart";
@@ -17,10 +11,35 @@ const initialCart: Cart = {
   shipping: 0,
 };
 
+// Create cart context
+interface CartContextType {
+  cart: Cart;
+  addToCart: (artPiece: ArtPiece, quantity?: number) => void;
+  removeFromCart: (artPieceId: string) => void;
+  updateQuantity: (artPieceId: string, quantity: number) => void;
+  clearCart: () => void;
+  getItemCount: () => number;
+  isInCart: (artPieceId: string) => boolean;
+  getItemQuantity: (artPieceId: string) => number;
+}
+
+const CartContext = createContext<CartContextType | undefined>(undefined);
+
+export function CartProvider({ children }: { children: ReactNode }) {
+  const cartMethods = useCartMethods();
+  return (
+    <CartContext.Provider value={cartMethods}>
+      {children}
+    </CartContext.Provider>
+  );
+}
+
+function useCartMethods() {
+
 export function useCart() {
   const [cart, setCart] = useState<Cart>(() => {
     // Initialize cart from localStorage on first render
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       const savedCart = localStorage.getItem(CART_STORAGE_KEY);
       if (savedCart) {
         try {
@@ -39,7 +58,7 @@ export function useCart() {
   // Save cart to localStorage whenever it changes
   useEffect(() => {
     console.log("useCart: Cart state changed", cart);
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
     }
   }, [cart]);
@@ -82,11 +101,11 @@ export function useCart() {
         subtotal: totals.subtotal || 0,
         tax: totals.tax || 0,
         shipping: totals.shipping || 0,
-        total: totals.total || 0,
+        total: totals.total || 0
       };
 
       // Force immediate localStorage update
-      if (typeof window !== "undefined") {
+      if (typeof window !== 'undefined') {
         localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newCart));
       }
 
@@ -105,11 +124,11 @@ export function useCart() {
         subtotal: totals.subtotal || 0,
         tax: totals.tax || 0,
         shipping: totals.shipping || 0,
-        total: totals.total || 0,
+        total: totals.total || 0
       };
 
       // Force immediate localStorage update
-      if (typeof window !== "undefined") {
+      if (typeof window !== 'undefined') {
         localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(newCart));
       }
 
