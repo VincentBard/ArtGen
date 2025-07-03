@@ -20,9 +20,9 @@ export default function Index() {
   const features = [
     {
       icon: <Sparkles className="h-6 w-6" />,
-      title: "AI-Generated Excellence",
+      title: "Digital Excellence",
       description:
-        "Discover unique artworks created by cutting-edge AI technology and human creativity.",
+        "Discover unique artworks created by talented digital artists using cutting-edge creative tools.",
     },
     {
       icon: <Palette className="h-6 w-6" />,
@@ -34,7 +34,7 @@ export default function Index() {
       icon: <Users className="h-6 w-6" />,
       title: "Curated by Artists",
       description:
-        "Every piece is carefully selected and approved by our community of digital artists.",
+        "Every piece is carefully selected and approved by our community of professional artists.",
     },
     {
       icon: <Star className="h-6 w-6" />,
