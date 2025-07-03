@@ -125,8 +125,8 @@ export default function ProductDetail() {
   );
   const currentPrice = selectedSizeOption?.price || artwork.price;
 
-  // Mock additional images (in real app, artwork would have multiple images)
-  const images = [artwork.image, artwork.image, artwork.image];
+  // Single image display
+  const images = [artwork.image];
 
   return (
     <div className="min-h-screen bg-background">
