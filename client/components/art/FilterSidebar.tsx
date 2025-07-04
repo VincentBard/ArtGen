@@ -19,6 +19,7 @@ import {
   availableArtists,
   priceRange,
 } from "@/data/mockArt";
+import { cn } from "@/lib/utils";
 
 interface FilterSidebarProps {
   filters: SearchFilters;
