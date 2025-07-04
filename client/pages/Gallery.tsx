@@ -82,6 +82,11 @@ export default function Gallery() {
   useEffect(() => {
     const searchFromUrl = searchParams.get("search") || "";
     setSearchQuery(searchFromUrl);
+
+    // Also update the filters to actually apply the search
+    if (searchFromUrl) {
+      setFilters((prevFilters) => ({ ...prevFilters, query: searchFromUrl }));
+    }
   }, [searchParams]);
 
   // Update URL when filters change
