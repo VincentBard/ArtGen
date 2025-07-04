@@ -103,8 +103,8 @@ export function FilterSidebar({
   };
 
   return (
-    <Card className={className}>
-      <CardHeader className="pb-3">
+    <Card className={cn("flex flex-col", className)}>
+      <CardHeader className="pb-3 flex-shrink-0">
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg flex items-center gap-2">
             <Filter className="h-5 w-5" />
@@ -128,7 +128,7 @@ export function FilterSidebar({
           )}
         </div>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6 flex-1 overflow-y-auto max-h-[calc(100vh-12rem)]">
         {/* Price Range */}
         <div className="space-y-3">
           <Label className="text-sm font-medium">Price Range</Label>
