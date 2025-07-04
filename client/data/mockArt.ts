@@ -338,7 +338,6 @@ export const mockArtPieces: ArtPiece[] = [
       "A minimalist expression of the subconscious mind, represented by layered waves and ripples.",
     medium: "Watercolor and Ink on Paper",
     year: 2024,
-    edition: { current: 2, total: 10 },
     tags: ["ocean", "waves", "blue", "calm"],
     inStock: true,
     featured: false,
