@@ -361,7 +361,6 @@ export const mockArtPieces: ArtPiece[] = [
       "Vintage photographs and textures merge to reveal the fractured self beneath the surface.",
     medium: "Mixed Media on Board",
     year: 2023,
-    edition: { current: 1, total: 1 },
     tags: ["identity", "vintage", "cutout", "emotion"],
     inStock: true,
     featured: false,
