@@ -26,6 +26,7 @@ export interface ArtPiece {
   tags: string[];
   inStock: boolean;
   featured?: boolean;
+  collections?: string[];
 }
 
 export interface CartItem {
