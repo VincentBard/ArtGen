@@ -200,10 +200,14 @@ export default function Gallery() {
         {/* Page Header */}
         <div className="mb-8">
           <h1 className="font-display text-3xl md:text-4xl font-bold mb-2">
-            Art Gallery
+            {searchParams.get("collection")
+              ? `Collection: ${searchParams.get("collection")}`
+              : "Art Gallery"}
           </h1>
           <p className="text-muted-foreground">
-            Discover amazing digital artworks from talented artists worldwide
+            {searchParams.get("collection")
+              ? `Curated artworks from the ${searchParams.get("collection")} collection`
+              : "Discover amazing digital artworks from talented artists worldwide"}
           </p>
         </div>
 
