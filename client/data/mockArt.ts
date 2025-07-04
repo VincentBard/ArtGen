@@ -15,7 +15,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 850,
     currency: "USD",
     image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=1200&fit=crop",
+      "https://api.deepai.org/job-view-file/9f79578a-bb55-4b26-b9c4-4199f2af2a71/outputs/output.jpg",
     description:
       "A mesmerizing blend of reality and fantasy, this piece explores the liminal space between dreams and consciousness.",
     medium: "Digital Print on Canvas",
