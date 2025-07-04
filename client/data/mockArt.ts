@@ -384,7 +384,6 @@ export const mockArtPieces: ArtPiece[] = [
       "Otherworldly flowers bloom against a cosmic backdrop, blending flora and stars.",
     medium: "Acrylic and Resin on Canvas",
     year: 2025,
-    edition: { current: 2, total: 15 },
     tags: ["floral", "cosmos", "pink", "texture"],
     inStock: true,
     featured: true,
