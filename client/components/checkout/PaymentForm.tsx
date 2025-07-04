@@ -238,9 +238,12 @@ export function PaymentForm({ onNext, onBack, initialData }: PaymentFormProps) {
                               <Input
                                 placeholder="YY"
                                 maxLength={2}
-                                {...field}
+                                value={
+                                  field.value ? field.value.toString() : ""
+                                }
                                 onChange={(e) => {
-                                  const value = parseInt(e.target.value) || 0;
+                                  const value =
+                                    parseInt(e.target.value) || undefined;
                                   field.onChange(value);
                                 }}
                               />
