@@ -269,7 +269,6 @@ export const mockArtPieces: ArtPiece[] = [
       "A field of golden wheat bathed in morning light, captured with expressive strokes and layered texture.",
     medium: "Acrylic and Gold Leaf on Wood",
     year: 2022,
-    edition: { current: 1, total: 1 },
     tags: ["nature", "sunlight", "organic", "gold"],
     inStock: true,
     featured: true,
