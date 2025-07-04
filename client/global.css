@@ -95,6 +95,18 @@
 
   body {
     @apply bg-background text-foreground font-sans;
+    background-image:
+      radial-gradient(
+        circle at 25% 25%,
+        rgba(252, 87, 27, 0.03) 0%,
+        transparent 25%
+      ),
+      radial-gradient(
+        circle at 75% 75%,
+        rgba(33, 9, 129, 0.03) 0%,
+        transparent 25%
+      );
+    background-attachment: fixed;
     font-feature-settings:
       "rlig" 1,
       "calt" 1;
