@@ -36,9 +36,13 @@ export function Header() {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Search submitted:", searchQuery);
+
     if (searchQuery.trim()) {
       // Navigate to gallery with search query using React Router
-      navigate(`/gallery?search=${encodeURIComponent(searchQuery)}`);
+      const searchUrl = `/gallery?search=${encodeURIComponent(searchQuery.trim())}`;
+      console.log("Navigating to:", searchUrl);
+      navigate(searchUrl);
       setSearchQuery(""); // Clear search after navigation
     }
   };
