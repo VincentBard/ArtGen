@@ -15,7 +15,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 850,
     currency: "USD",
     image:
-      "https://api.deepai.org/job-view-file/1cfe9669-ded1-4f36-8507-1c0cb5259d43/outputs/output.jpg",
+      "https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-ee50-622f-9f95-d1c615d0d54e/raw?se=2025-07-04T01%3A55%3A04Z&sp=r&sv=2024-08-04&sr=b&scid=e5a39bbc-0499-529c-99de-59b738f9edcb&skoid=add8ee7d-5fc7-451e-b06e-a82b2276cf62&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-03T14%3A53%3A11Z&ske=2025-07-04T14%3A53%3A11Z&sks=b&skv=2024-08-04&sig=wLmFo4KBwJL%2BLGGko2pgvmBYfwTnLd8rh4JLasJSMG8%3D",
     description:
       "A mesmerizing blend of reality and fantasy, this piece explores the liminal space between dreams and consciousness.",
     medium: "Digital Print on Canvas",
