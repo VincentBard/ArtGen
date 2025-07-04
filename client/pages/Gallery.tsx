@@ -194,6 +194,10 @@ export default function Gallery() {
   const handleClearFilters = () => {
     setFilters({});
     setSearchQuery("");
+    // Also clear the search parameter from URL
+    const newParams = new URLSearchParams(searchParams);
+    newParams.delete("search");
+    setSearchParams(newParams);
   };
 
   const handleSearchSubmit = (e: React.FormEvent) => {
