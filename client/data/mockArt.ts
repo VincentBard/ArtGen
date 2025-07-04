@@ -244,7 +244,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 720,
     currency: "USD",
     image:
-      "https://images.unsplash.com/photo-1602526212335-842c7bded05b?w=800&h=1200&fit=crop",
+      "https://api.deepai.org/job-view-file/f98acf39-efc4-4bd5-abc2-c158106941b2/outputs/output.jpg",
     description:
       "Vivid hues of violet and orange dance through a swirling nebula-like form, representing cosmic energy.",
     medium: "Digital Print on Aluminum",
