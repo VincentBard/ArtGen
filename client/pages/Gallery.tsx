@@ -61,6 +61,10 @@ export default function Gallery() {
     if (searchParams.get("artist")) {
       initialFilters.artist = searchParams.get("artist") || undefined;
     }
+    if (searchParams.get("collection")) {
+      // For collection filter, use as a search query
+      initialFilters.query = searchParams.get("collection") || undefined;
+    }
     if (searchParams.get("featured")) {
       initialFilters.featured = searchParams.get("featured") === "true";
     }
@@ -417,7 +421,6 @@ export default function Gallery() {
 
       <Footer />
       <FloatingCart />
-      
     </div>
   );
 }
