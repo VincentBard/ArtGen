@@ -291,7 +291,7 @@ export const mockArtPieces: ArtPiece[] = [
     description:
       "A chaotic yet harmonious visual symphony created with algorithmic randomness.",
     medium: "Archival Digital Print",
-    year: 2025,https://api.deepai.org/job-view-file/3fc6fead-d3d4-401e-9f23-64704a536a6c/outputs/output.jpg
+    year: 2025,
     tags: ["tech", "algorithm", "abstract", "AI"],
     inStock: true,
     featured: false,
