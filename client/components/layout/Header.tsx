@@ -85,10 +85,17 @@ export function Header() {
               <Input
                 type="search"
                 placeholder="Search artworks..."
-                className="pl-10"
+                className="pl-10 pr-12"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
               />
+              <Button
+                type="submit"
+                size="sm"
+                className="absolute right-1 top-1/2 -translate-y-1/2 h-8 px-3"
+              >
+                <Search className="h-4 w-4" />
+              </Button>
             </div>
           </form>
         </div>
