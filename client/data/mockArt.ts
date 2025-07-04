@@ -364,7 +364,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 430,
     currency: "USD",
     image:
-      "https://images.unsplash.com/photo-1599407614615-68e55a276e6a?w=800&h=1200&fit=crop",
+      "https://api.deepai.org/job-view-file/b29d2831-6faf-488a-a08a-5fd5aa5b837d/outputs/output.jpg",
     description:
       "Vintage photographs and textures merge to reveal the fractured self beneath the surface.",
     medium: "Mixed Media on Board",
