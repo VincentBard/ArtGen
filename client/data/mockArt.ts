@@ -220,7 +220,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 1200,
     currency: "USD",
     image:
-      "https://images.unsplash.com/photo-1603791452906-cfdb7f021ec6?w=800&h=1200&fit=crop",
+      "https://api.deepai.org/job-view-file/3fc6fead-d3d4-401e-9f23-64704a536a6c/outputs/output.jpgp",
     description:
       "A lone figure walks through a rain-soaked alley, the city humming quietly in the background.",
     medium: "Oil on Canvas",
