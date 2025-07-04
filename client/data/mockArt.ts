@@ -316,7 +316,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 980,
     currency: "USD",
     image:
-      "https://images.unsplash.com/photo-1613553507747-3fef70b395b0?w=800&h=1200&fit=crop",
+      "https://api.deepai.org/job-view-file/3ea6849b-4d18-4119-a587-590a39de5621/outputs/output.jpg",
     description:
       "Soft muted grays and silhouettes evoke the feeling of wandering through morning mist.",
     medium: "Oil on Linen",
