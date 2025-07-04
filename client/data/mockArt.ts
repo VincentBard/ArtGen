@@ -315,7 +315,6 @@ export const mockArtPieces: ArtPiece[] = [
       "Soft muted grays and silhouettes evoke the feeling of wandering through morning mist.",
     medium: "Oil on Linen",
     year: 2023,
-
     tags: ["mist", "gray", "quiet", "city"],
     inStock: false,
     featured: false,
