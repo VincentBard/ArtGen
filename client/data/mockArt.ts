@@ -380,7 +380,7 @@ export const mockArtPieces: ArtPiece[] = [
     artist: {
       name: "Sofia Kim",
       avatar:
-        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
+        "https://api.deepai.org/job-view-file/f73cd1bf-0e5d-4d07-9a9c-073319b5a37b/outputs/output.jpg",
       bio: "Mixed media artist with a focus on organic textures and dreamlike symbolism.",
     },
     style: "Fantasy Art",
