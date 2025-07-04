@@ -268,7 +268,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 950,
     currency: "USD",
     image:
-      "https://images.unsplash.com/photo-1582555055174-3b5f18d3e4ec?w=800&h=1200&fit=crop",
+      "https://api.deepai.org/job-view-file/5462bfd5-ce0a-4189-b8ad-43213c06a5d2/outputs/output.jpg",
     description:
       "A field of golden wheat bathed in morning light, captured with expressive strokes and layered texture.",
     medium: "Acrylic and Gold Leaf on Wood",
