@@ -395,7 +395,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 890,
     currency: "USD",
     image:
-      "https://api.deepai.org/job-view-file/f73cd1bf-0e5d-4d07-9a9c-073319b5a37b/outputs/output.jpg",
+      "https://sdmntprcentralus.oaiusercontent.com/files/00000000-42d0-61f5-bf85-0679e7e5fdd6/raw?se=2025-07-04T01%3A47%3A19Z&sp=r&sv=2024-08-04&sr=b&scid=d7d304aa-13a7-595f-ad8c-b3d5085c258c&skoid=add8ee7d-5fc7-451e-b06e-a82b2276cf62&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-03T05%3A39%3A05Z&ske=2025-07-04T05%3A39%3A05Z&sks=b&skv=2024-08-04&sig=Cba9FfUpJvzO2k4e4rd5mpm6SisoALztiOGiGWZVcWw%3D",
     description:
       "Otherworldly flowers bloom against a cosmic backdrop, blending flora and stars.",
     medium: "Acrylic and Resin on Canvas",
