@@ -412,7 +412,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 990,
     currency: "USD",
     image:
-      "https://images.unsplash.com/photo-1588776814546-b38c7129f5c6?w=800&h=1200&fit=crop",
+      "https://api.deepai.org/job-view-file/dbac29e7-62c1-4abd-9246-26da71e5e9c5/outputs/output.jpg",
     description:
       "Glitched lines, neon overlays, and corrupted forms represent human error in a digital world.",
     medium: "Generative Digital Print",
