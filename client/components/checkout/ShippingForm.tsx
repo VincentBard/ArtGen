@@ -31,7 +31,7 @@ const shippingSchema = z.object({
   phone: z.string().optional(),
   street: z.string().min(5, "Please enter a valid street address"),
   city: z.string().min(2, "Please enter a valid city"),
-  state: z.string().min(2, "Please select a state"),
+  state: z.string().min(2, "Please select a province"),
   postalCode: z.string().min(5, "Please enter a valid postal code"),
   country: z.string().min(2, "Please select a country"),
 });
@@ -65,7 +65,7 @@ export function ShippingForm({
       city: "",
       state: "",
       postalCode: "",
-      country: "US",
+      country: "CA",
       ...initialData,
     },
   });
@@ -89,21 +89,22 @@ export function ShippingForm({
     onNext({ customer, shipping });
   };
 
-  const countries = [
-    { value: "US", label: "United States" },
-    { value: "CA", label: "Canada" },
-    { value: "GB", label: "United Kingdom" },
-    { value: "AU", label: "Australia" },
-    { value: "DE", label: "Germany" },
-    { value: "FR", label: "France" },
-  ];
+  const countries = [{ value: "CA", label: "Canada" }];
 
-  const states = [
-    { value: "AL", label: "Alabama" },
-    { value: "CA", label: "California" },
-    { value: "FL", label: "Florida" },
-    { value: "NY", label: "New York" },
-    { value: "TX", label: "Texas" },
+  const provinces = [
+    { value: "AB", label: "Alberta" },
+    { value: "BC", label: "British Columbia" },
+    { value: "MB", label: "Manitoba" },
+    { value: "NB", label: "New Brunswick" },
+    { value: "NL", label: "Newfoundland and Labrador" },
+    { value: "NS", label: "Nova Scotia" },
+    { value: "ON", label: "Ontario" },
+    { value: "PE", label: "Prince Edward Island" },
+    { value: "QC", label: "Quebec" },
+    { value: "SK", label: "Saskatchewan" },
+    { value: "NT", label: "Northwest Territories" },
+    { value: "NU", label: "Nunavut" },
+    { value: "YT", label: "Yukon" },
   ];
 
   return (
@@ -226,20 +227,23 @@ export function ShippingForm({
                   name="state"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>State</FormLabel>
+                      <FormLabel>Province</FormLabel>
                       <Select
                         onValueChange={field.onChange}
                         defaultValue={field.value}
                       >
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select state" />
+                            <SelectValue placeholder="Select province" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          {states.map((state) => (
-                            <SelectItem key={state.value} value={state.value}>
-                              {state.label}
+                          {provinces.map((province) => (
+                            <SelectItem
+                              key={province.value}
+                              value={province.value}
+                            >
+                              {province.label}
                             </SelectItem>
                           ))}
                         </SelectContent>

@@ -23,6 +23,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["abstract", "dreams", "purple", "mystical"],
     inStock: true,
     featured: true,
+    collections: ["Digital Dreams"],
   },
   {
     id: "2",
@@ -46,6 +47,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["cyberpunk", "neon", "city", "futuristic"],
     inStock: true,
     featured: true,
+    collections: ["Neon Futures"],
   },
   {
     id: "3",
@@ -68,6 +70,7 @@ export const mockArtPieces: ArtPiece[] = [
     year: 2024,
     tags: ["abstract", "organic", "nature", "flowing"],
     inStock: true,
+    collections: ["Digital Dreams", "Nature's Algorithms"],
   },
   {
     id: "4",
@@ -91,6 +94,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["space", "meditation", "cosmic", "stars"],
     inStock: true,
     featured: true,
+    collections: ["Cosmic Wonders"],
   },
   {
     id: "5",
@@ -113,6 +117,7 @@ export const mockArtPieces: ArtPiece[] = [
     year: 2024,
     tags: ["dystopian", "urban", "decay", "atmospheric"],
     inStock: true,
+    collections: [],
   },
   {
     id: "6",
@@ -135,6 +140,7 @@ export const mockArtPieces: ArtPiece[] = [
     year: 2024,
     tags: ["botanical", "flowers", "nature", "delicate"],
     inStock: true,
+    collections: ["Digital Dreams", "Nature's Algorithms"],
   },
   {
     id: "7",
@@ -157,6 +163,7 @@ export const mockArtPieces: ArtPiece[] = [
     year: 2024,
     tags: ["geometric", "minimalist", "balance", "precision"],
     inStock: true,
+    collections: ["Minimal Geometries"],
   },
   {
     id: "8",
@@ -180,6 +187,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["ocean", "underwater", "marine", "depths"],
     inStock: true,
     featured: true,
+    collections: ["Cosmic Wonders", "Aquatic Dreams"],
   },
   {
     id: "9",
@@ -203,6 +211,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["abstract", "dreams", "purple", "mystical"],
     inStock: true,
     featured: true,
+    collections: ["Digital Dreams"],
   },
   {
     id: "10",
@@ -226,6 +235,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["city", "lonely", "moody", "blue tones"],
     inStock: true,
     featured: false,
+    collections: [],
   },
   {
     id: "11",
@@ -249,6 +259,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["space", "vibrant", "cosmic", "digital"],
     inStock: true,
     featured: false,
+    collections: ["Cosmic Wonders"],
   },
   {
     id: "12",
@@ -272,6 +283,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["nature", "sunlight", "organic", "gold"],
     inStock: true,
     featured: true,
+    collections: ["Nature's Algorithms"],
   },
   {
     id: "13",
@@ -295,6 +307,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["tech", "algorithm", "abstract", "AI"],
     inStock: true,
     featured: false,
+    collections: [],
   },
   {
     id: "14",
@@ -318,6 +331,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["mist", "gray", "quiet", "city"],
     inStock: false,
     featured: false,
+    collections: [],
   },
   {
     id: "15",
@@ -341,6 +355,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["ocean", "waves", "blue", "calm"],
     inStock: true,
     featured: false,
+    collections: ["Aquatic Dreams"],
   },
   {
     id: "16",
@@ -364,6 +379,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["identity", "vintage", "cutout", "emotion"],
     inStock: true,
     featured: false,
+    collections: [],
   },
   {
     id: "17",
@@ -387,6 +403,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["floral", "cosmos", "pink", "texture"],
     inStock: true,
     featured: true,
+    collections: ["Cosmic Wonders", "Nature's Algorithms"],
   },
   {
     id: "18",
@@ -410,6 +427,7 @@ export const mockArtPieces: ArtPiece[] = [
     tags: ["glitch", "neon", "digital", "code"],
     inStock: true,
     featured: false,
+    collections: ["Neon Futures"],
   },
 ];
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Filter } from "lucide-react";
+import { X, Filter, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -157,6 +157,7 @@ export function FilterSidebar({
             <Label className="text-sm font-medium cursor-pointer">
               Art Styles
             </Label>
+            <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 data-[state=closed]:rotate-0 data-[state=open]:rotate-180" />
           </CollapsibleTrigger>
           <CollapsibleContent className="space-y-2 mt-3">
             {availableStyles.map((style) => (
@@ -185,6 +186,7 @@ export function FilterSidebar({
         <Collapsible defaultOpen>
           <CollapsibleTrigger className="flex w-full items-center justify-between">
             <Label className="text-sm font-medium cursor-pointer">Medium</Label>
+            <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 data-[state=closed]:rotate-0 data-[state=open]:rotate-180" />
           </CollapsibleTrigger>
           <CollapsibleContent className="space-y-2 mt-3">
             {availableMediums.map((medium) => (
@@ -215,6 +217,7 @@ export function FilterSidebar({
             <Label className="text-sm font-medium cursor-pointer">
               Artists
             </Label>
+            <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 data-[state=closed]:rotate-0 data-[state=open]:rotate-180" />
           </CollapsibleTrigger>
           <CollapsibleContent className="space-y-2 mt-3">
             {availableArtists.map((artist) => (

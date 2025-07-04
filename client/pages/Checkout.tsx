@@ -55,6 +55,7 @@ export default function Checkout() {
     // Only allow going back to completed steps
     if (stepIndex < currentStep) {
       setCurrentStep(stepIndex);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -65,11 +66,13 @@ export default function Checkout() {
     setCustomer(data.customer);
     setShipping(data.shipping);
     setCurrentStep(1);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handlePaymentNext = (data: PaymentMethod) => {
     setPayment(data);
     setCurrentStep(2);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleOrderPlace = () => {
@@ -78,6 +81,7 @@ export default function Checkout() {
     setOrderNumber(orderNum);
     clearCart();
     setCurrentStep(3);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleStartNewOrder = () => {
