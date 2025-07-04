@@ -47,6 +47,9 @@ export function PaymentForm({ onNext, onBack, initialData }: PaymentFormProps) {
       type: "card",
       cardNumber: "",
       cardholderName: "",
+      expiryMonth: undefined,
+      expiryYear: undefined,
+      cvv: "",
       ...initialData,
     },
   });
