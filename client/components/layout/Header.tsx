@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Search, ShoppingCart, Menu, User, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,6 +17,7 @@ import { useState } from "react";
 export function Header() {
   const { getItemCount } = useCart();
   const location = useLocation();
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
 
   const navigation = [
@@ -36,8 +37,9 @@ export function Header() {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      // Navigate to gallery with search query
-      window.location.href = `/gallery?search=${encodeURIComponent(searchQuery)}`;
+      // Navigate to gallery with search query using React Router
+      navigate(`/gallery?search=${encodeURIComponent(searchQuery)}`);
+      setSearchQuery(""); // Clear search after navigation
     }
   };
 
