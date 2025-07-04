@@ -430,7 +430,7 @@ export default function About() {
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
             Join our community of art enthusiasts and start your collection of
-            stunning AI-generated artworks today.
+            stunning digital artworks today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
