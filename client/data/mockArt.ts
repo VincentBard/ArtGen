@@ -39,7 +39,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 1200,
     currency: "USD",
     image:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop",
+      "https://api.deepai.org/job-view-file/be017e7e-f72d-404e-8bc1-a52428eb1552/outputs/output.jpg",
     description:
       "A vibrant exploration of future cities where neon lights dance across towering structures.",
     medium: "Digital Print on Aluminum",
