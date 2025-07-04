@@ -292,7 +292,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 1100,
     currency: "USD",
     image:
-      "https://images.unsplash.com/photo-1635233758741-059f36b48ef3?w=800&h=1200&fit=crop",
+      "https://api.deepai.org/job-view-file/9f79578a-bb55-4b26-b9c4-4199f2af2a71/outputs/output.jpg",
     description:
       "A chaotic yet harmonious visual symphony created with algorithmic randomness.",
     medium: "Archival Digital Print",
