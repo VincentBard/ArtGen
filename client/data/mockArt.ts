@@ -200,7 +200,6 @@ export const mockArtPieces: ArtPiece[] = [
       "A mesmerizing blend of reality and fantasy, this piece explores the liminal space between dreams and consciousness.",
     medium: "Digital Print on Canvas",
     year: 2024,
-    edition: { current: 3, total: 25 },
     tags: ["abstract", "dreams", "purple", "mystical"],
     inStock: true,
     featured: true,
