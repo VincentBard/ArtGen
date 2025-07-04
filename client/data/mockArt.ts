@@ -1,5 +1,6 @@
 import { ArtPiece } from "@shared/types";
 
+
 export const mockArtPieces: ArtPiece[] = [
   {
     id: "1",
@@ -39,7 +40,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 1200,
     currency: "USD",
     image:
-      "https://api.deepai.org/job-view-file/be017e7e-f72d-404e-8bc1-a52428eb1552/outputs/output.jpg",
+      "NeonCityscapes.jpg",
     description:
       "A vibrant exploration of future cities where neon lights dance across towering structures.",
     medium: "Digital Print on Aluminum",
@@ -110,7 +111,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 750,
     currency: "USD",
     image:
-      "https://api.deepai.org/job-view-file/c876c42d-caa5-4173-bafe-0e6107cc4c91/outputs/output.jpg",
+      "UrbanDecay.jpg",
     description:
       "A haunting portrayal of civilization's remnants, beauty found in destruction.",
     medium: "Digital Print on Metal",
@@ -227,7 +228,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 1200,
     currency: "USD",
     image:
-      "https://api.deepai.org/job-view-file/3fc6fead-d3d4-401e-9f23-64704a536a6c/outputs/output.jpgp",
+      "UrbanSolitude.jpg",
     description:
       "A lone figure walks through a rain-soaked alley, the city humming quietly in the background.",
     medium: "Oil on Canvas",
@@ -251,7 +252,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 720,
     currency: "USD",
     image:
-      "https://api.deepai.org/job-view-file/f98acf39-efc4-4bd5-abc2-c158106941b2/outputs/output.jpg",
+      "NebulaPulse.jpg",
     description:
       "Vivid hues of violet and orange dance through a swirling nebula-like form, representing cosmic energy.",
     medium: "Digital Print on Aluminum",
@@ -275,7 +276,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 950,
     currency: "USD",
     image:
-      "https://api.deepai.org/job-view-file/5462bfd5-ce0a-4189-b8ad-43213c06a5d2/outputs/output.jpg",
+      "GoldenReverie.jpg",
     description:
       "A field of golden wheat bathed in morning light, captured with expressive strokes and layered texture.",
     medium: "Acrylic and Gold Leaf on Wood",
@@ -299,7 +300,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 1100,
     currency: "USD",
     image:
-      "https://api.deepai.org/job-view-file/9f79578a-bb55-4b26-b9c4-4199f2af2a71/outputs/output.jpg",
+      "Codeandchaos.jpg",
     description:
       "A chaotic yet harmonious visual symphony created with algorithmic randomness.",
     medium: "Archival Digital Print",
@@ -323,7 +324,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 980,
     currency: "USD",
     image:
-      "https://api.deepai.org/job-view-file/3ea6849b-4d18-4119-a587-590a39de5621/outputs/output.jpg",
+      "Throughthefog.jpg",
     description:
       "Soft muted grays and silhouettes evoke the feeling of wandering through morning mist.",
     medium: "Oil on Linen",
