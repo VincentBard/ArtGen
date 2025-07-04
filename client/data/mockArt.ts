@@ -223,7 +223,6 @@ export const mockArtPieces: ArtPiece[] = [
       "A lone figure walks through a rain-soaked alley, the city humming quietly in the background.",
     medium: "Oil on Canvas",
     year: 2023,
-    edition: { current: 1, total: 1 },
     tags: ["city", "lonely", "moody", "blue tones"],
     inStock: true,
     featured: false,
