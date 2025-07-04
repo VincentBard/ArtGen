@@ -40,7 +40,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 1200,
     currency: "USD",
     image:
-      "/client/data/NeonCityscapes.jpg",
+      "NeonCityscapes.jpg",
     description:
       "A vibrant exploration of future cities where neon lights dance across towering structures.",
     medium: "Digital Print on Aluminum",
@@ -111,7 +111,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 750,
     currency: "USD",
     image:
-      "/client/data/UrbanDecay.jpg",
+      "UrbanDecay.jpg",
     description:
       "A haunting portrayal of civilization's remnants, beauty found in destruction.",
     medium: "Digital Print on Metal",
@@ -228,7 +228,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 1200,
     currency: "USD",
     image:
-      "/client/data/UrbanSolitude.jpg",
+      "UrbanSolitude.jpg",
     description:
       "A lone figure walks through a rain-soaked alley, the city humming quietly in the background.",
     medium: "Oil on Canvas",
@@ -252,7 +252,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 720,
     currency: "USD",
     image:
-      "/client/data/NebulaPulse.jpg",
+      "NebulaPulse.jpg",
     description:
       "Vivid hues of violet and orange dance through a swirling nebula-like form, representing cosmic energy.",
     medium: "Digital Print on Aluminum",
@@ -276,7 +276,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 950,
     currency: "USD",
     image:
-      "/client/data/GoldenReverie.jpg",
+      "GoldenReverie.jpg",
     description:
       "A field of golden wheat bathed in morning light, captured with expressive strokes and layered texture.",
     medium: "Acrylic and Gold Leaf on Wood",
@@ -300,7 +300,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 1100,
     currency: "USD",
     image:
-      "/client/data/Codeandchaos.jpg",
+      "Codeandchaos.jpg",
     description:
       "A chaotic yet harmonious visual symphony created with algorithmic randomness.",
     medium: "Archival Digital Print",
@@ -324,7 +324,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 980,
     currency: "USD",
     image:
-      "/client/data/Throughthefog.jpg",
+      "Throughthefog.jpg",
     description:
       "Soft muted grays and silhouettes evoke the feeling of wandering through morning mist.",
     medium: "Oil on Linen",
