@@ -107,7 +107,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 750,
     currency: "USD",
     image:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=1200&fit=crop",
+      "https://api.deepai.org/job-view-file/c876c42d-caa5-4173-bafe-0e6107cc4c91/outputs/output.jpg",
     description:
       "A haunting portrayal of civilization's remnants, beauty found in destruction.",
     medium: "Digital Print on Metal",
