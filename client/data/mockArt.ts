@@ -380,7 +380,7 @@ export const mockArtPieces: ArtPiece[] = [
     artist: {
       name: "Sofia Kim",
       avatar:
-        "https://api.deepai.org/job-view-file/f73cd1bf-0e5d-4d07-9a9c-073319b5a37b/outputs/output.jpg",
+        "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=150&h=150&fit=crop&crop=face",
       bio: "Mixed media artist with a focus on organic textures and dreamlike symbolism.",
     },
     style: "Fantasy Art",
@@ -388,7 +388,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 890,
     currency: "USD",
     image:
-      "https://images.unsplash.com/photo-1505489304219-3675c78c7259?w=800&h=1200&fit=crop",
+      "https://api.deepai.org/job-view-file/f73cd1bf-0e5d-4d07-9a9c-073319b5a37b/outputs/output.jpg",
     description:
       "Otherworldly flowers bloom against a cosmic backdrop, blending flora and stars.",
     medium: "Acrylic and Resin on Canvas",
