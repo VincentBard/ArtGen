@@ -407,7 +407,6 @@ export const mockArtPieces: ArtPiece[] = [
       "Glitched lines, neon overlays, and corrupted forms represent human error in a digital world.",
     medium: "Generative Digital Print",
     year: 2024,
-    edition: { current: 4, total: 8 },
     tags: ["glitch", "neon", "digital", "code"],
     inStock: true,
     featured: false,
