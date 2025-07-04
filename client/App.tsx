@@ -17,6 +17,7 @@ import Artists from "./pages/Artists";
 import Collections from "./pages/Collections";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import { ScrollToTop } from "./components/layout/ScrollToTop";
 
 const queryClient = new QueryClient();
 
