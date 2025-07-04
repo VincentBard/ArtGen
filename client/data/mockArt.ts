@@ -246,7 +246,6 @@ export const mockArtPieces: ArtPiece[] = [
       "Vivid hues of violet and orange dance through a swirling nebula-like form, representing cosmic energy.",
     medium: "Digital Print on Aluminum",
     year: 2024,
-    edition: { current: 10, total: 50 },
     tags: ["space", "vibrant", "cosmic", "digital"],
     inStock: true,
     featured: false,
