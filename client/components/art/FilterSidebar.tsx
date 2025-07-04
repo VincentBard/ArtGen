@@ -153,11 +153,11 @@ export function FilterSidebar({
 
         {/* Art Styles */}
         <Collapsible defaultOpen>
-          <CollapsibleTrigger className="flex w-full items-center justify-between">
+          <CollapsibleTrigger className="group flex w-full items-center justify-between">
             <Label className="text-sm font-medium cursor-pointer">
               Art Styles
             </Label>
-            <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 data-[state=closed]:rotate-180 data-[state=open]:rotate-0" />
+            <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200 group-data-[state=closed]:rotate-0 group-data-[state=open]:rotate-180" />
           </CollapsibleTrigger>
           <CollapsibleContent className="space-y-2 mt-3">
             {availableStyles.map((style) => (
