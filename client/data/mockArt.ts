@@ -371,7 +371,7 @@ export const mockArtPieces: ArtPiece[] = [
     price: 430,
     currency: "USD",
     image:
-      "https://api.deepai.org/job-view-file/b29d2831-6faf-488a-a08a-5fd5aa5b837d/outputs/output.jpg",
+      "https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-81c4-622f-82d5-58bdeb59caed/raw?se=2025-07-04T01%3A52%3A47Z&sp=r&sv=2024-08-04&sr=b&scid=529d8a12-b972-57ba-a1a4-db18d453ed57&skoid=add8ee7d-5fc7-451e-b06e-a82b2276cf62&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-04T00%3A50%3A13Z&ske=2025-07-05T00%3A50%3A13Z&sks=b&skv=2024-08-04&sig=iKIynp0pCYmKvSwMBhI8RRNMefPAeJgn7M%2B8IQLVxKg%3D",
     description:
       "Vintage photographs and textures merge to reveal the fractured self beneath the surface.",
     medium: "Mixed Media on Board",
