@@ -78,6 +78,12 @@ export default function Gallery() {
     return initialFilters;
   });
 
+  // Update search query when URL params change (e.g., from header search)
+  useEffect(() => {
+    const searchFromUrl = searchParams.get("search") || "";
+    setSearchQuery(searchFromUrl);
+  }, [searchParams]);
+
   // Update URL when filters change
   useEffect(() => {
     const params = new URLSearchParams();
